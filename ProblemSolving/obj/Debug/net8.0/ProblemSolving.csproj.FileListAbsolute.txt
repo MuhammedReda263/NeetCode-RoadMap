@@ -12,3 +12,4 @@ C:\Users\Muhammed Reda\Desktop\ProblemSolving\ProblemSolving\obj\Debug\net8.0\re
 C:\Users\Muhammed Reda\Desktop\ProblemSolving\ProblemSolving\obj\Debug\net8.0\ProblemSolving.pdb
 C:\Users\Muhammed Reda\Desktop\ProblemSolving\ProblemSolving\obj\Debug\net8.0\ProblemSolving.genruntimeconfig.cache
 C:\Users\Muhammed Reda\Desktop\ProblemSolving\ProblemSolving\obj\Debug\net8.0\ref\ProblemSolving.dll
+C:\Users\Muhammed Reda\Desktop\ProblemSolving\ProblemSolving\obj\Debug\net8.0\ProblemSolving.sourcelink.json

@@ -14,14 +14,20 @@
             //string s1 = "ahmed";
             //string s2 = "amedh";
             //Console.WriteLine(Solution.IsAnagram(s1,s2));
-            int[] nums = [4,5,6]; int target = 10;
+            //int[] nums = [4,5,6]; int target = 10;
 
-            int [] arr =Solution.TwoSum(nums, target);
-            foreach (int i in arr)
+            //int [] arr =Solution.TwoSum(nums, target);
+            //foreach (int i in arr)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            string[] input = { "act", "pots", "tops", "cat", "stop", "hat" };
+            var result =Solution.GroupAnagrams(input);
+
+            foreach (var group in result)
             {
-                Console.WriteLine(i);
+                Console.WriteLine($"[{string.Join(", ", group)}]");
             }
-
 
 
         }

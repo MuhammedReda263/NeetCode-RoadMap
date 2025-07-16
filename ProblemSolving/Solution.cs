@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,5 +65,24 @@ namespace ProblemSolving
             }
           return new int[0];
         }
+
+        public static List<List<string>> GroupAnagrams(string[] strs)
+        {
+            Dictionary<string,List<string>> Dictionary = new Dictionary<string,List<string>>();
+            foreach (var str in strs)
+            {
+                char[] chars = str.ToCharArray();
+                Array.Sort(chars);
+                string Key = new string(chars);
+                if (!Dictionary.ContainsKey(Key))
+                {
+                    Dictionary[Key] = new List<string>();
+                }
+
+                Dictionary[Key].Add(str);
+            }
+                return Dictionary.Values.ToList();
+        }
+     
     }
 }
