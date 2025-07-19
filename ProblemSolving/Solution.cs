@@ -83,6 +83,66 @@ namespace ProblemSolving
             }
                 return Dictionary.Values.ToList();
         }
-     
+
+        public static int[] TopKFrequent(int[] nums, int k)
+        {
+            Dictionary<int , int> Dictionary = new Dictionary<int , int>();
+            foreach (int i in nums)
+            {
+                if (!Dictionary.ContainsKey(i))
+                {
+                    Dictionary[i] = 1;
+                }
+                else
+                {
+                   var x = Dictionary[i];
+                    Dictionary[i] = x+1;
+                }
+            }
+            var topK = Dictionary.OrderByDescending(pair => pair.Value)
+                             .Take(k)
+                             .Select(pair => pair.Key)
+                             .ToArray();
+
+            return topK;
+        }
+
+        public bool IsValid(string s)
+        {
+            Stack<char> stack = new Stack<char>();
+            Dictionary<char, char> matchingBrackets = new Dictionary<char, char>()
+        {
+            { ')', '(' },
+            { '}', '{' },
+            { ']', '[' }
+        };
+            if (s.Length % 2 == 1) return false;
+            foreach (char c in s)
+            {
+                if (c =='{' || c=='(' || c == '[')
+                {
+                    stack.Push(c);
+                }
+                else if (matchingBrackets.ContainsKey(c))
+                {
+                    if (matchingBrackets[c] == stack.Peek())
+                    {
+                        stack.Pop();
+
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return stack.Count == 0;
+        }
+
     }
 }

@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|c:\\users\\muhammed reda\\desktop\\problemsolving\\problemsolving\\minstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|solutionrelative:problemsolving\\minstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|c:\\users\\muhammed reda\\desktop\\problemsolving\\problemsolving\\stack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|solutionrelative:problemsolving\\stack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|c:\\users\\muhammed reda\\desktop\\problemsolving\\problemsolving\\solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|solutionrelative:problemsolving\\solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|c:\\users\\muhammed reda\\desktop\\problemsolving\\problemsolving\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|solutionrelative:problemsolving\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|c:\\users\\muhammed reda\\desktop\\problemsolving\\problemsolving\\linkedstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52D93BA5-729E-4FF5-AC30-C9D35F14BF3C}|ProblemSolving\\ProblemSolving.csproj|solutionrelative:problemsolving\\linkedstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,25 +51,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MinStack.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\MinStack.cs",
+              "RelativeDocumentMoniker": "ProblemSolving\\MinStack.cs",
+              "ToolTip": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\MinStack.cs",
+              "RelativeToolTip": "ProblemSolving\\MinStack.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T00:35:08.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LinkedStack.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\LinkedStack.cs",
+              "RelativeDocumentMoniker": "ProblemSolving\\LinkedStack.cs",
+              "ToolTip": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\LinkedStack.cs",
+              "RelativeToolTip": "ProblemSolving\\LinkedStack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T23:27:18.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Stack.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\Stack.cs",
+              "RelativeDocumentMoniker": "ProblemSolving\\Stack.cs",
+              "ToolTip": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\Stack.cs",
+              "RelativeToolTip": "ProblemSolving\\Stack.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwDUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T22:21:15.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Solution.cs",
               "DocumentMoniker": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\Solution.cs",
               "RelativeDocumentMoniker": "ProblemSolving\\Solution.cs",
-              "ToolTip": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\Solution.cs*",
-              "RelativeToolTip": "ProblemSolving\\Solution.cs*",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAiwFgAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\Solution.cs",
+              "RelativeToolTip": "ProblemSolving\\Solution.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAmwI8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-14T17:55:31.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\Program.cs",
               "RelativeDocumentMoniker": "ProblemSolving\\Program.cs",
               "ToolTip": "C:\\Users\\Muhammed Reda\\Desktop\\ProblemSolving\\ProblemSolving\\Program.cs",
               "RelativeToolTip": "ProblemSolving\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBIAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwDMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-14T17:37:48.063Z",
               "EditorCaption": ""
