@@ -10,8 +10,8 @@ namespace ProblemSolving
     public class Solution
     {
 
-       
-       public static bool hasDuplicate(int[] nums)
+
+        public static bool hasDuplicate(int[] nums)
         {
             HashSet<int> numbers = new HashSet<int>();
             for (int i = 0; i < nums.Length; i++)
@@ -28,7 +28,7 @@ namespace ProblemSolving
         {
             int[] result = new int[nums.Length];
             result[0] = nums[0];
-            for (int i = 1; i < nums.Length;i++)
+            for (int i = 1; i < nums.Length; i++)
             {
                 result[i] = result[i - 1] + nums[i];
             }
@@ -40,35 +40,35 @@ namespace ProblemSolving
         {
             if (s == null || t == null) return false;
             if (s.Length != t.Length) return false;
-            var s1 = s.ToCharArray(); 
-            var t1 = t.ToCharArray(); 
+            var s1 = s.ToCharArray();
+            var t1 = t.ToCharArray();
             Array.Sort(s1);
-             Array.Sort(t1);
+            Array.Sort(t1);
 
             return s1.SequenceEqual(t1);
         }
 
         public static int[] TwoSum(int[] nums, int target)
         {
-            for (int i = 0; i < nums.Length;i++)
+            for (int i = 0; i < nums.Length; i++)
             {
-  
-                for (int j = i+1 ; j < nums.Length; j++)
+
+                for (int j = i + 1; j < nums.Length; j++)
                 {
                     if (nums[i] + nums[j] == target)
                     {
                         return new int[] { i, j };
-                    }   
+                    }
                 }
-                
-               
+
+
             }
-          return new int[0];
+            return new int[0];
         }
 
         public static List<List<string>> GroupAnagrams(string[] strs)
         {
-            Dictionary<string,List<string>> Dictionary = new Dictionary<string,List<string>>();
+            Dictionary<string, List<string>> Dictionary = new Dictionary<string, List<string>>();
             foreach (var str in strs)
             {
                 char[] chars = str.ToCharArray();
@@ -81,12 +81,12 @@ namespace ProblemSolving
 
                 Dictionary[Key].Add(str);
             }
-                return Dictionary.Values.ToList();
+            return Dictionary.Values.ToList();
         }
 
         public static int[] TopKFrequent(int[] nums, int k)
         {
-            Dictionary<int , int> Dictionary = new Dictionary<int , int>();
+            Dictionary<int, int> Dictionary = new Dictionary<int, int>();
             foreach (int i in nums)
             {
                 if (!Dictionary.ContainsKey(i))
@@ -95,8 +95,8 @@ namespace ProblemSolving
                 }
                 else
                 {
-                   var x = Dictionary[i];
-                    Dictionary[i] = x+1;
+                    var x = Dictionary[i];
+                    Dictionary[i] = x + 1;
                 }
             }
             var topK = Dictionary.OrderByDescending(pair => pair.Value)
@@ -119,7 +119,7 @@ namespace ProblemSolving
             if (s.Length % 2 == 1) return false;
             foreach (char c in s)
             {
-                if (c =='{' || c=='(' || c == '[')
+                if (c == '{' || c == '(' || c == '[')
                 {
                     stack.Push(c);
                 }
@@ -134,7 +134,7 @@ namespace ProblemSolving
                     {
                         return false;
                     }
-                
+
                 }
                 else
                 {
@@ -144,5 +144,54 @@ namespace ProblemSolving
             return stack.Count == 0;
         }
 
+        public static int EvalRPN(string[] tokens)
+        {
+            Stack<int> stack = new Stack<int>();
+            foreach (var c in tokens)
+            {
+                if (int.TryParse(c, out var value))
+                {
+                    stack.Push(value);
+                }
+                else
+                {
+                    int y = stack.Pop();
+                    int x = stack.Pop();
+                    int z;
+
+                    switch (c)
+                    {
+                        case "+": z = x + y; stack.Push(z); break;
+                        case "-": z = x - y; stack.Push(z); break;
+                        case "*": z = x * y; stack.Push(z); break;
+                        case "/": z = x / y; stack.Push(z); break;
+                        default: break;
+                    }
+
+                }
+
+            }
+            return stack.Pop();
+        }
+
+        public static int[] DailyTemperatures(int[] temperatures)
+        {
+
+           
+            int[] result = new int[temperatures.Length];
+            Stack<int> stack = new Stack<int>(); 
+
+           for (int i = 0; i < temperatures.Length; i++)
+            {
+                while (stack.Count>0 && temperatures[i] > temperatures[stack.Peek()])
+                {
+                    int prev = stack.Pop();
+                    result[prev] = i - prev;
+                }
+                stack.Push(i);
+            }
+
+            return result;
+        }
     }
 }

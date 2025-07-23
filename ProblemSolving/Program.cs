@@ -43,14 +43,25 @@
             //stack.pop();
             //stack.print();            
 
-            MinStack minStack = new MinStack();
-            minStack.Push(1);
-            minStack.Push(2);
-            minStack.Push(0);
-          Console.WriteLine(minStack.GetMin()); // return 0
-            minStack.Pop();
-            Console.WriteLine(minStack.Top());    // return 2
-            minStack.GetMin();
+            //  MinStack minStack = new MinStack();
+            //  minStack.Push(1);
+            //  minStack.Push(2);
+            //  minStack.Push(0);
+            //Console.WriteLine(minStack.GetMin()); // return 0
+            //  minStack.Pop();
+            //  Console.WriteLine(minStack.Top());    // return 2
+            //  minStack.GetMin();
+
+            //string[] tokens = ["1", "2", "+", "3", "*", "4", "-"];
+            // Console.WriteLine(Solution.EvalRPN(tokens));
+            int[] temperatures = [30, 38, 30, 36, 35, 40, 28];
+            int[] n = [22, 21, 20];
+           int [] r = Solution.DailyTemperatures(temperatures);
+            foreach (int i in r)
+            {
+                Console.WriteLine(i);
+            }
+
 
         }
     }
