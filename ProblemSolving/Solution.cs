@@ -193,5 +193,21 @@ namespace ProblemSolving
 
             return result;
         }
-    }
+
+		public static bool IsPalindrome(string s)
+		{
+			if (string.IsNullOrEmpty(s)) return true;
+			int i = 0;
+			int x = s.Length - 1;
+			while (i < x)
+			{
+				while (i < x && !char.IsLetterOrDigit(s[i])) i++;
+				while (i < x && !char.IsLetterOrDigit(s[x])) x--;
+				if (char.ToLower(s[i]) != char.ToLower(s[x])) return false;
+				i++; x--;
+			}
+			return true;
+
+		}
+	}
 }
