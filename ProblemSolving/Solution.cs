@@ -209,5 +209,123 @@ namespace ProblemSolving
 			return true;
 
 		}
-	}
+
+		public static int[] TwoSumm(int[] numbers, int target)
+        {
+
+			int l = 0, r = numbers.Length - 1;
+			while (l < r)
+			{
+				int sum = numbers[l] + numbers[r];
+				if (sum == target)
+			    return new[] { l + 1, r + 1 };
+				if (sum < target) l++;
+				else r--;
+			}
+			return Array.Empty<int>();
+
+		}
+
+		public static List<List<int>> ThreeSum(int[] nums)
+		{
+			Array.Sort(nums);
+			List<List<int>> list = new List<List<int>>();
+			int n = nums.Length;
+
+			for (int i = 0; i < n - 2; i++)
+			{
+				if (i > 0 && nums[i] == nums[i - 1]) continue;
+
+				int x = i + 1;
+				int y = n - 1;
+
+				while (x < y)
+				{
+					int sum = nums[i] + nums[x] + nums[y];
+
+					if (sum == 0)
+					{
+						list.Add(new List<int> { nums[i], nums[x], nums[y] });
+						x++;
+						y--;
+
+						while (x < y && nums[x] == nums[x - 1]) x++;
+						while (x < y && nums[y] == nums[y + 1]) y--;
+					}
+					else if (sum < 0)
+					{
+						x++;
+					}
+					else
+					{
+						y--;
+					}
+				}
+			}
+			return list;
+		}
+
+		public static List<List<int>> ThreeSumm(int[] nums)
+		{
+			List<List<int>> List = new List<List<int>>();
+            Array.Sort(nums);
+            int n = nums.Length;
+            for (int i = 0; i < n-2; i++)
+            {
+                if (i >0 && nums[i] == nums[i - 1])
+                continue;
+                int x =i+1 ; int y = n-1;
+
+                while (x < y)
+                {
+                    int sum = nums[i] + nums[x] + nums[y];
+                    if (sum == 0)
+                    {
+                        List.Add(new List<int> { nums[i], nums[x], nums[y] });
+                        x++;
+                        y--;
+						while (x < y && nums[x] == nums[x - 1]) x++;
+						while (x < y && nums[y] == nums[y + 1]) y--;
+					}
+                    else if (sum < 0)
+                    {
+                        x++;
+                    }
+                    else
+                    {
+                        y--;
+                    }
+                }
+
+            }
+			return List;
+		}
+
+		public static int MaxArea(int[] heights)
+        {
+            int x = 0;
+            int y = heights.Length - 1;
+            int oldsum = (y-x) * Math.Min(heights[y], heights[x]);
+            int newsum;
+            int width;
+            while(x < y)
+            {
+                width = y - x;
+                newsum = width * Math.Min(heights[y], heights[x]);
+				if (newsum > oldsum)
+                oldsum = newsum;
+                if (heights[x] < heights[y])
+                {
+                    x++;
+                }
+                else
+                {
+                    y--;
+                }
+
+            }
+            return oldsum;
+
+        }
+    }
 }
