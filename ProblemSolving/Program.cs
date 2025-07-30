@@ -75,8 +75,16 @@
 			//{
 			//	Console.WriteLine(x);
 			//}
-			int[] height = [2,2,2];
-			Console.WriteLine(Solution.MaxArea(height));
+			//int[] height = [2,2,2];
+			//Console.WriteLine(Solution.MaxArea(height));
+			MyLinkedList myLinkedList = new MyLinkedList();
+			myLinkedList.addFirst(1);
+			myLinkedList.addFirst(2);
+			myLinkedList.addFirst(3);
+			myLinkedList.AddLast(4);
+			myLinkedList.InsertAfter(3,5);
+			myLinkedList.PrintList();
+			Console.WriteLine(myLinkedList.Search(35));
 
 
 
