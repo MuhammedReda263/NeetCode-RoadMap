@@ -62,12 +62,13 @@ namespace ProblemSolving
 		public void InsertAfter(int target, int val)
 		{
 			Nodee cuurent = head;
-			while (cuurent != null && cuurent.value != target) {
+			while (cuurent != null && cuurent.value != target)
+			{
 				cuurent = cuurent.next;
 			}
 			if (cuurent != null)
 			{
-				Nodee newNode = new Nodee (val);
+				Nodee newNode = new Nodee(val);
 				newNode.next = cuurent.next;
 				cuurent.next = newNode;
 
@@ -99,13 +100,13 @@ namespace ProblemSolving
 			}
 
 			Nodee current = head;
-			
-				while ( current != null && current.next.value != val)
-				{
-					current = current.next;
-				}
 
-				if ( current.next.value == val)
+			while (current != null && current.next.value != val)
+			{
+				current = current.next;
+			}
+
+			if (current.next.value == val)
 			{
 				current.next = current.next.next;
 				return;
@@ -117,15 +118,15 @@ namespace ProblemSolving
 
 		public bool Search(int val)
 		{
-                if (head == null) return false;
+			if (head == null) return false;
 			Nodee current = head;
-				while (current.value != val && current.next != null)
+			while (current.value != val && current.next != null)
 			{
 				current = current.next;
 			}
-				if( current.value == val)
+			if (current.value == val)
 				return true;
-				else return false;
+			else return false;
 		}
 
 		public void PrintList()
@@ -162,7 +163,7 @@ namespace ProblemSolving
 			Nodee current;
 			if (list1.value < list2.value)
 			{
-				current=list1;
+				current = list1;
 				list1 = list1.next;
 			}
 			else
@@ -172,14 +173,14 @@ namespace ProblemSolving
 			}
 			Nodee prev = current;
 
-			while (list1 !=null || list2 != null)
+			while (list1 != null || list2 != null)
 			{
 				if (list1.value < list2.value)
 				{
 					prev.next = list1;
 					list1 = list1.next;
 				}
-				else if (list1.value> list2.value)
+				else if (list1.value > list2.value)
 				{
 					prev.next = list2;
 					list2 = list2.next;
@@ -203,6 +204,52 @@ namespace ProblemSolving
 				}
 			}
 			return current;
+		}
+
+		public bool HasCycle(Nodee head)
+		{
+			Nodee current = head;
+			HashSet<Nodee> visited = new HashSet<Nodee>();
+			while (current != null)
+			{
+				if (visited.Contains(current)) { return true; }
+				else
+				{
+					visited.Add(current);
+					current = current.next;
+				};
+			}
+			return false;
+		}
+		public void ReorderList(Nodee head)
+		{
+			if (head == null || head.next == null) return;
+			Nodee slow = head;
+			Nodee fast = head;
+			while (fast != null && fast.next != null)
+			{
+				slow = slow.next;
+				fast = fast.next.next;
+			}
+			Nodee current = slow, prev = null , next; 
+			while(current != null)
+			{
+				next = current.next;
+				current.next = prev;
+				prev = current;
+				current = next;
+			}
+
+			Nodee first = head , second = prev;
+			while(second.next != null)
+			{
+				Nodee temp1 = first.next;
+				Nodee temp2 = second.next;
+				first.next = second;
+				second.next = temp1;
+				first = temp1;
+				second = temp2;
+			}
 		}
 	}
 }
