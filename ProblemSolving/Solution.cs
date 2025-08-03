@@ -289,5 +289,41 @@ namespace ProblemSolving
             return oldsum;
 
         }
-    }
+
+		//public static int MaxProfit(int[] prices)
+		//      {
+		//          int max = 0;
+		//          int sum = 0;
+		//          for (int i = 0; i < prices.Length-1; i++) 
+		//              {
+		//              for (int j = i + 1; j < prices.Length - 1; j++)
+		//              {
+		//                  sum = prices[j] - prices[i];
+		//                  max = Math.Max(max, sum);
+		//		}
+
+		//              }
+		//          return max;
+		//      }
+
+	public static int MaxProfit(int[] prices)
+		{
+            int minPrice=int.MaxValue;
+            int profit;
+            int Maxprofit=0;
+
+		  foreach (int price in prices)
+            {
+                if (price < minPrice)
+                minPrice = price;
+
+                profit = price-minPrice;
+                Maxprofit = Math.Max(Maxprofit, profit);
+
+            }
+
+          return Maxprofit;
+		}
+
+	}
 }
