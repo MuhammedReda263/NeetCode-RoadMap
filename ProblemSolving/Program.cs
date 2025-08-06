@@ -5,7 +5,7 @@ namespace ProblemSolving
     internal class Program
     {
         static void Main(string[] args)
-        {
+		{
 			//int[] arr = {1,6,1,5};
 			//Console.WriteLine(Solution.hasDuplicate(arr)); 
 			//int[] arr2 = Solution.RunningSum(arr);
@@ -88,8 +88,11 @@ namespace ProblemSolving
 			//myLinkedList.PrintList();
 			//Console.WriteLine(myLinkedList.Search(35));
 
-			int[] prices = [10, 8, 7, 5, 2];
-			Console.WriteLine(int.MaxValue);
+			//int[] prices = [10, 8, 7, 5, 2];
+			//Console.WriteLine(int.MaxValue);
+
+			Console.WriteLine(Solution.LengthOfLongestSubstring("zxyzxyz"));
+
 
 
 

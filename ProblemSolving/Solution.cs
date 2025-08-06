@@ -325,5 +325,34 @@ namespace ProblemSolving
           return Maxprofit;
 		}
 
-	}
+        //pwwkew
+       //   |  | 
+        public static int LengthOfLongestSubstring(string s)
+        {
+            if (s.Length == 0) return 0;
+            if (s.Length == 1) return 1;
+
+            int left = 0, right = 0;
+            int maxVal = 0;
+            Dictionary<char, int> dic = new Dictionary<char, int>();
+            while (right < s.Length)
+            {
+                if (!dic.ContainsKey(s[right]))
+                {
+                    dic.Add(s[right], right);
+                }
+                else
+                {
+                    left = Math.Max(dic[s[right]] + 1, left);
+                    dic[s[right]] = right;
+                }
+
+                maxVal = Math.Max((right - left + 1), maxVal);
+                right++;
+            }
+            return maxVal;
+
+        }
+
+    }
 }
