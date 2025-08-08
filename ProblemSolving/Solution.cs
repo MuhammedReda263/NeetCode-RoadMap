@@ -354,5 +354,65 @@ namespace ProblemSolving
 
         }
 
+        public int Search(int[] nums, int target)
+        {
+            int left = 0, right = nums.Length - 1;
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+                if (nums[mid] == target)
+                {
+                    return mid;
+                }
+                else if (target > nums[mid])
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
+                }
+            }
+            return -1;
+        }
+
+        public static bool SearchMatrix(int[][] matrix, int target)
+        {
+            if (matrix.Length == 0 || matrix[0].Length == 0)
+                return false;
+            if (target < matrix[0][0] || target > matrix[matrix.Length - 1][matrix[matrix.Length - 1].Length - 1])
+                return false;
+            int y=0;
+            for (int i = 0; i < matrix.Length; i++)
+            {
+                int x = matrix[i].Length-1;
+                if (target <= matrix[i][x])
+                {
+                     y = i;
+                    break;
+                }
+            }
+
+            int left = 0, right = matrix[y].Length - 1;
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+                if (matrix[y][mid] == target)
+                {
+                    return true;
+                }
+                else if (target > matrix[y][mid])
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
+                }
+            }
+            return false;
+
+        }
+
     }
 }
