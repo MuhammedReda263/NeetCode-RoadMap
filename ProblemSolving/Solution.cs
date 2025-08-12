@@ -2,8 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ProblemSolving
 {
@@ -413,6 +416,36 @@ namespace ProblemSolving
             return false;
 
         }
+        public static int MinEatingSpeed(int[] piles, int h)
+        {
+            int left = 1, right = piles.Max();
+            int result=right;
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+                if (isCan(piles,h, mid))
+                {
+                    result = mid;
+                    right = mid - 1;
+                }
+                else
+                {
+                    left = mid + 1;
+                }
+            }
+            return result;
+        }
 
+        public static bool isCan (int[] piles, int h,int k)
+        {
+            int sum = 0;
+            foreach (int i in piles)
+            {
+                sum+= (int)Math.Ceiling((double)i/k);
+            }
+            if (sum <= h)
+                return true;
+            else return false;
+        }
     }
 }

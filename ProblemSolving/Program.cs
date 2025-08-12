@@ -92,14 +92,16 @@ namespace ProblemSolving
             //Console.WriteLine(int.MaxValue);
 
             //Console.WriteLine(Solution.LengthOfLongestSubstring("zxyzxyz"));
-            int[][] matrix = [[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]]; int target = 0;
+            //int[][] matrix = [[1, 2, 4, 8], [10, 11, 12, 13], [14, 20, 30, 40]]; int target = 0;
 
-            Console.WriteLine(Solution.SearchMatrix(matrix, target));
+            //Console.WriteLine(Solution.SearchMatrix(matrix, target));
+
+            int[] piles = [25, 10, 23, 4]; int h = 4;
+            Console.WriteLine(Solution.MinEatingSpeed(piles, h));
 
 
 
 
-
-		}
+        }
 	}
 }
